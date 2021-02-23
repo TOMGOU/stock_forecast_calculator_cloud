@@ -1,0 +1,8 @@
+{
+  "navigationBarTitleText": "相关计算参数指引",
+  "usingComponents": {
+    "x-steps": "../../step/steps/index",
+    "x-step": "../../step/step/index",
+    "x-ticket-step": "../../step/ticket-step/index"
+  }
+}

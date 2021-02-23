@@ -1,0 +1,62 @@
+<x-step
+  itemType="x-step-ucar-vertical"
+  iconSize="{{ iconSize }}"
+  iconColor="{{ iconColor }}"
+  icon="{{ icon }}"
+  propOptions="{{options}}"
+>
+  <view
+    slot="title"
+    class="follow-steps__traces-title"
+  >
+    <text class="follow-steps__title-content">{{ trace.title }}</text>
+    <text wx:if="{{ trace.created_at }}" class="follow-steps__title-time">{{ trace.created_at }}</text>
+  </view>
+  <view slot="content">
+    <!--操作人头像-->
+    <view class="follow-steps__operator-avatar" wx:if="{{ trace.operator_avatar }}">
+      <image class="follow-steps__profile-img" src="{{ trace.operator_avatar }}" />
+    </view>
+    <view
+      class="follow-steps__traces-tips"
+    >
+      <slot name="desc">
+      </slot>
+      <view class="follow-steps__traces-tips" wx:if="{{ imgs && imgs.length > 0}}">
+        <view class="follow-steps__traces-image">
+          <view
+            class="follow-steps__traces-image-item"
+            wx:for="{{ parse.getImgThumb(imgs) }}"
+            wx:key="index"
+            wx:for-index="index"
+            key="{{ index }}"
+            wx:for-item="item"
+            bindtap="handlePreviewImg"
+            data-index="{{ index }}"
+            data-imageurl="{{ item }}"
+          >
+            <image class="follow-steps__thumbnail" src="{{ item }}" />
+          </view>
+        </view>
+        <text
+          class="follow-steps__operateBtnText"
+          bindtap="handlePreviewImg"
+          data-imageurl="{{ imgs[0] }}"
+        >查看全部{{ imgs.length }}张</text>
+      </view>
+      <slot name="footer">
+      </slot>
+    </view>
+  </view>
+</x-step>
+<wxs module="parse">
+module.exports = {
+  getImgThumb: function(imgs) {
+    if (imgs && imgs.length > 3) {
+      return imgs.slice(0, 3)
+    }
+
+    return imgs || []
+  }
+}
+</wxs>

@@ -1,0 +1,79 @@
+<view class="x-steps-demo">
+    <view class="one-tag">格局八步投资体系简介</view>
+    <x-steps direction="vertical">
+        <x-ticket-step status="finish" trace="{{ trace[0] }}" iconSize="14" icon="pending">
+            <view slot="desc">
+                <view>长周期大波段价值投资:</view>
+                <view>以天为单位看待收益，相信的是奇迹和运气；</view>
+                <view>以年为单位瞄准收益，相信的是天赋和能力；</view>
+                <view>以3-5年为周期规划财务，相信的是胆识和眼光；</view>
+                <view>以10年为单位思考财富，相信的是常识和复利；</view>
+                <view>以更长周期看待财富，相信的是时代和命运。</view>
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[1] }}" iconSize="14" icon="pending">
+            <view slot="desc">
+                <view>好股的特征一：时代性，比如新能源车产业链和节能环保；</view>
+                <view>好股的特征二：主导行业，比如金融；</view>
+                <view>好股的特征三：业绩持续增长，比如食品白酒；</view>
+                <view>好股的特征四：商业模式创新，比如文化创意行业。</view>
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[2] }}" conSize="14" icon="pending">
+            <view slot="desc">
+                <view>季报出来，高增长的区分方法:</view>
+                <view>1、利润增长的质量。主营业务增长+营业收入与利润同步；</view>
+                <view>2、利润高增长与市场预期(研报的一致预期)的差 异，越大越好。</view>
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[3] }}" iconSize="14" icon="pending">
+            <view slot="desc">
+                <view>财务基本指标选择:</view>
+                <view>1、ROE不小于15%；</view>
+                <view>2、毛利率稳定在30%以上，净利润10%以上，最好大于100亿；</view>
+                <view>3、估值相对便宜，市盈率小于过去5年平均市盈率；</view>
+                <view>4、高成长性，收入同比、净利同比高于15%；</view>
+                <view>5、良好的自由现金流。</view>
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[4] }}" iconSize="24" iconColor="red" icon="transaction_fill">
+            <view slot="desc">
+                <view class="highlight">每当季报或者年报出来的时候都需要复盘调整</view>
+                <view class="highlight">这是这个计算器的来由，具体作用自行体会</view>
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[5] }}" iconSize="14" icon="pending">
+            <view slot="desc">
+                <view>明确各种情况，有备无患</view>
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[6] }}" iconSize="14" icon="pending">
+            <view slot="desc">
+                <view>买入情况：</view>
+                <view>1、市场整体低估（比如2020年3月的疫情）；</view>
+                <view>2、行业遇到重大问题事件，出现低估；</view>
+                <view>3、优秀个股(公司)出现重大事件，出现低估。</view>
+                <view>卖出情况：</view>
+                <view>1、市场严重高估(牛市尾期)；</view>
+                <view>2、个股严重高估 (市盈率大于过往高点)；</view>
+                <view>3、个股业绩结束高成长、开始盘整或下滑。</view>
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[7] }}" iconSize="14" icon="pending">
+            <view slot="desc">
+                <view>模拟盘练习</view>
+                <view>小额资金练习</view>
+                <view>定期定投积累</view>
+            </view>
+        </x-ticket-step>
+    </x-steps>
+    <view class="one-tag">以下二维码是格局知识店铺，对投资感兴趣的朋友可以了解一下。</view>
+    <image
+        bindtap="handlePreviewImage"
+        show-menu-by-longpress="true"
+        style="display: block;width: 400rpx; height: 400rpx; background-color: #eeeeee;margin: auto;"
+        mode="scaleToFill"
+        src="{{img}}"
+    ></image>
+    <ad unit-id="adunit-85c15f6b2a276582"></ad>
+</view>

@@ -1,0 +1,26 @@
+<view class="x-steps-demo">
+    <view class="one-tag">上市公司估值计算参数查找指引</view>
+    <x-steps direction="vertical">
+        <x-ticket-step status="finish" trace="{{ trace[0] }}" iconSize="14" icon="pending" imgs="{{images.step1}}">
+            <view slot="desc">
+                以东方财富app为例
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[1] }}" iconSize="14" icon="pending" imgs="{{images.step2}}">
+            <view slot="desc">
+                这里可以查看到总股本数据
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[2] }}" iconSize="14" icon="pending" imgs="{{images.step3}}">
+            <view slot="desc">
+                这里可以查看过去每年的净利润及其增长率
+            </view>
+        </x-ticket-step>
+        <x-ticket-step status="finish" trace="{{ trace[3] }}" iconSize="14" icon="pending" imgs="{{images.step4}}">
+            <view slot="desc">
+                这里可以查看过去1-10年的市盈率变化情况
+            </view>
+        </x-ticket-step>
+    </x-steps>
+    <ad unit-id="adunit-fb83961fbb136df0" ad-type="grid" grid-opacity="0.8" grid-count="5" ad-theme="white"></ad>
+</view>

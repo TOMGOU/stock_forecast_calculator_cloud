@@ -1,0 +1,30 @@
+<view class="list-card x-class">
+    <view wx:if="{{headerShow}}" class="list-card__header">
+        <view class="list-card__header--left">
+          <slot name="headerLeft"></slot>
+        </view>
+        <view class="list-card__header--right">
+          <slot name="headerRight"></slot>
+        </view>
+    </view>
+    <view class="list-card__body">
+      <view class="img-card" wx:if="{{showImg}}">
+        <image src="{{imgUrl}}" mode="aspectFill" />
+        <view wx:if="{{imgText}}" class="img-card__bottom">
+          {{imgText}}
+        </view>
+      </view>
+      <view class="span-card">
+        <view class="span-card--black">
+          {{title}}
+          <slot name="title"></slot>
+        </view>
+        <view class="span-card--gray">
+          <slot name="detailList"></slot>
+        </view>
+      </view>
+    </view>
+    <view wx:if="{{bottomShow}}" class="list-card__bottom">
+      <slot name="bottom"></slot>
+    </view>
+  </view>

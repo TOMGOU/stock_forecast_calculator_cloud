@@ -1,0 +1,90 @@
+/**index.wxss**/
+page {
+  background: #eee;
+}
+.page {
+  background: #eee;
+}
+.history__img {
+  display: block;
+  width: 400rpx;
+  margin: auto;
+  border: 1rpx solid #eee;
+}
+.history__time {
+  width: 400rpx;
+  height: 100rpx;
+  line-height: 100rpx;
+  text-align: center;
+  margin: 0 auto 20rpx;
+}
+
+.nav_tab {
+  width: 100%;
+  height: 100rpx;
+}
+.nav_box {
+  position: fixed;
+  z-index: 9;
+  width: 100%;
+  height: 100rpx;
+  display: flex;
+  background: #fff;
+  border-radius: 10rpx;
+  flex-direction: row;
+}
+/* 未选中的样式 */
+.common {
+  line-height: 100rpx;
+  text-align: center;
+  flex: 1;
+  color: #333;
+  font-size: 28rpx;
+  opacity: 0.5;
+}
+/* 选中时的样式 */
+.active {
+  line-height: 100rpx;
+  text-align: center;
+  color: #ef9ba8;
+  flex: 1;
+  font-size: 28rpx;
+}
+/* 下划线的样式 */
+.nav_underline {
+  background: #ef9ba8;
+  width: 100%;
+  height: 6rpx;
+  margin-top: -10rpx;
+  border-radius: 8rpx;
+}
+.button-box {
+  display: flex;
+}
+.button {
+  height: 60rpx;
+  font-size: 30rpx;
+  padding: 0 32rpx;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  box-sizing: border-box;
+  border: 2rpx solid #ddd;
+  color: #666;
+  border-radius: 8rpx;
+  margin-right: 12rpx;
+}
+.button--primary {
+  border: 2rpx solid #179c16;
+  font-weight: bold;
+  border: solid 2rpx #15a1ff;
+  color: #15a1ff;
+}
+.no-data {
+  maigin: 100rpx auto;
+  height: 60rpx;
+  line-height: 50rpx;
+  text-align: center;
+  color: #888;
+  font-size: 26rpx;
+}

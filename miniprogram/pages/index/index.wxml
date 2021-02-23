@@ -1,0 +1,38 @@
+<!--index.wxml-->
+<view>
+  <view class="page-section">
+    <view>
+      <view class="m-cell" wx:for="{{ stockInfoFormList }}" wx:for-index="index" wx:for-item="item" wx:key="index">
+        <view class="m-cell__hd">
+          <view class="m-label">{{item.title}}</view>
+        </view>
+        <view class="m-cell__bd">
+          <input
+            class="m-input"
+            bindinput="handleInput"
+            value="{{ stockInfo[item.name] }}"
+            data-name="{{ item.name }}"
+            placeholder="{{ item.placeholder }}"
+            maxlength="{{ item.maxlength }}"
+            name="{{ item.name }}"
+            type="{{ item.type }}"
+            cursor-spacing="50"
+            placeholder-style="color: #c9c9c9;" />
+            <text class="m-text">{{ item.unit }}</text>
+        </view>
+      </view>
+    </view>
+
+    <view class="footer">
+      <view class="footer-buttons">
+        <view class="button button--primary" bindtap="bindGenerateGraph">生成线形图</view>
+        <view class="button button--warning" bindtap="bindGenerateExcel">生成表格</view>
+      </view>
+      <view class="button" bindtap="bindClearStockInfo">重置</view>
+    </view>
+
+    <view class="history-box">
+      <view class="history" bindtap="handleGoHistory">查看估值记录</view>
+    </view>
+  </view>
+</view>

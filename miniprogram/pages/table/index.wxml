@@ -1,0 +1,6 @@
+<view class="container">
+  <scroll-view class="table-box" scroll-x="true">
+    <view class="title">{{title}}</view>
+    <l-table columns="{{columns}}" data="{{data}}" bindrowClick='onRowClick'></l-table>
+  </scroll-view>
+</view>

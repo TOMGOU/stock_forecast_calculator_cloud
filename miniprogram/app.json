@@ -1,0 +1,39 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/line/index",
+    "pages/table/index",
+    "pages/steps/index",
+    "pages/system/index",
+    "pages/about/index",
+    "pages/history/index"
+  ],
+  "tabBar": {
+    "backgroundColor": "#f5f5f5",
+    "borderStyle": "white",
+    "selectedColor": "#2A66EE",
+    "color": "#61666B",
+		"list": [
+			{
+				"iconPath": "images/home.png",
+				"selectedIconPath": "images/home-active.png",
+				"pagePath": "pages/index/index",
+				"text": "首页"
+			},
+			{
+				"iconPath": "images/help.png",
+				"selectedIconPath": "images/help-active.png",
+				"pagePath": "pages/about/index",
+				"text": "帮助"
+			}
+		]
+	},
+  "window":{
+    "backgroundTextStyle":"light",
+    "navigationBarBackgroundColor": "#fff",
+    "navigationBarTitleText": "黄金三角估值计算器",
+    "navigationBarTextStyle":"black"
+  },
+  "style": "v2",
+  "sitemapLocation": "sitemap.json"
+}

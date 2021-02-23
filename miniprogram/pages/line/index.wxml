@@ -1,0 +1,7 @@
+<!--index.wxml-->
+<view class="container">
+  <ec-canvas id="mychart-dom-line" canvas-id="mychart-line" ec="{{ ec }}"></ec-canvas>
+  <cover-view class="button-box">
+    <button class="button" bindtap="save" type="primary" plain="true" size="mini">保存</button>
+  </cover-view >
+</view>

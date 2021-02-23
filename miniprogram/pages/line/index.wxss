@@ -1,0 +1,15 @@
+/**index.wxss**/
+ec-canvas {
+  width: 100%;
+  height: 100%;
+}
+
+.button-box {
+  position: fixed;
+  bottom: 10rpx;
+}
+
+.button .wx-button-cover-view-inner,
+.button .wx-button-cover-view-wrapper {
+  padding: 0 50rpx;
+}

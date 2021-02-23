@@ -1,0 +1,65 @@
+<view class="page">
+    <view class="page__bd">
+        <view class="weui-cells__title">常见问题</view>
+        <view class="weui-cells weui-cells_after-title">
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" wx:for="{{faqList}}" wx:key="index" data-index="{{index}}" bindtap="showHelp">
+                <view class="weui-cell__bd">{{item.title}}</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access"></view>
+            </view>
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="handleGoHelp">
+                <view class="weui-cell__bd">相关计算参数哪里找？</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+                    <view hidden="{{isRedDot1}}" class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="handleGoInvestSystem">
+                <view class="weui-cell__bd">格局八步投资体系了解一下？</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+                    <view hidden="{{isRedDot2}}" class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+                </view>
+            </view>
+            <view class="weui-cell weui-cell_access" hover-class="weui-cell_active" bindtap="handleGoHistory">
+                <view class="weui-cell__bd">查看估值记录</view>
+                <view class="weui-cell__ft weui-cell__ft_in-access" style="font-size: 0">
+                    <view hidden="{{isRedDot3}}" class="weui-badge weui-badge_dot" style="margin-left: 5px;margin-right: 5px;"></view>
+                </view>
+            </view>
+        </view>
+        <!--<view class="weui-cells__title">扫描二维码有惊喜</view>
+        <view class="img-container">
+            <view class="img-box">
+                <image
+                    bindtap="handlePreviewImage1"
+                    show-menu-by-longpress="true"
+                    class="img-qr"
+                    mode="scaleToFill"
+                    src="{{img1}}"
+                ></image>
+                <view class="img-title">免费财商公开课</view>
+            </view>
+            <view class="img-box">
+                <image
+                    bindtap="handlePreviewImage2"
+                    show-menu-by-longpress="true"
+                    class="img-qr"
+                    mode="scaleToFill"
+                    src="{{img2}}"
+                ></image>
+                <view class="img-title">格局知识店铺</view>
+            </view>
+        </view>-->
+        <view class="weui-cells__title">专属广告位</view>
+        <ad-custom unit-id="adunit-ea9cdb87fccc8b66"></ad-custom>
+
+        <view class="weui-footer weui-footer_fixed-bottom">
+            <view class="weui-footer-box">
+                <view class="weui-footer__author">
+                    Copyright © tomgou
+                </view>
+                <view class="weui-footer__repo">
+                    https://github.com/TOMGOU/stock_forecast_calculator
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

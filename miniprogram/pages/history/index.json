@@ -1,0 +1,6 @@
+{
+  "navigationBarTitleText": "估值记录",
+  "usingComponents": {
+    "x-list-card": "../../list-card/index"
+  }
+}

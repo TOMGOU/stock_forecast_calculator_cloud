@@ -1,0 +1,63 @@
+<!--index.wxml-->
+<view class="page">
+
+  <view class="nav_tab">
+    <view class="nav_box">
+      <view
+        wx:for="{{list}}" 
+        wx:key="index" 
+        class="{{selected==index?'active':'common'}}" 
+        data-index='{{index}}' 
+        bindtap="selected"
+      >
+        {{ item }} {{ index === 1 ? '(需观看广告)' : '' }}
+        <view class="{{selected==index?'nav_underline':''}}"></view>
+      </view>
+    </view>
+  </view>
+  <!-- tab1  -->
+  <view wx:if="{{selected == 0}}">
+    <view class="no-data" wx:if="{{ selfRecord.length === 0 }}">暂无数据</view>
+    <x-list-card
+      wx:for="{{ selfRecord }}"
+      wx:key="index" 
+      imgUrl="{{ item.imgUrl }}"
+      imgText="{{ item.name }}"
+      headerShow="{{ false }}"
+      bottomShow="{{ true }}"
+    >
+      <view slot="detailList" data-item="{{item}}" bindtap="handleLine">
+        <view>去年股价：{{ item.price }}元</view>
+        <view>总股本：{{ item.capital}}亿</view>
+        <view>最低市盈率：{{ item.lowestPE }}</view>
+        <view>最高市盈率：{{ item.highestPE }}</view>
+        <view>今年预计增长率：{{ item.growth1 }}%</view>
+      </view>
+      <view slot="bottom">
+        <view class="button-box">
+          <view class="button button--primary" data-item="{{item}}" bindtap="handleExcel">表格</view>
+          <view class="button button--primary" data-item="{{item}}" bindtap="handleLine">曲线图</view>
+          <view class="button button--primary" data-item="{{item}}" bindtap="handleEdit">编辑</view>
+          <view class="button" data-item="{{item}}" bindtap="handleRemove">删除</view>
+        </view>
+      </view>
+    </x-list-card>
+  </view>
+
+  <!-- tab2 -->
+  <view wx:if="{{selected == 1}}">
+
+    <view class="history" wx:for="{{images}}" wx:key="index" data-index="{{index}}">
+      <image
+        class="history__img"
+        bindtap="tapPreviewImage"
+        data-index="{{index}}"
+        mode="aspectFit"
+        src="{{item.url}}"
+        style="background: {{item.bg}}"
+      ></image>
+      <view class="history__time">{{item.time}}</view>
+    </view>
+  
+  </view>
+</view>
